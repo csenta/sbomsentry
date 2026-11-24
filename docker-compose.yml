@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  sbomsentry:
+    build: .
+    container_name: sbomsentry
+    volumes:
+      - ./examples:/app/examples
+      - ./reports:/app/reports
+    command: ["scan", "--input", "examples/cyclonedx_sbom.json", "--output-html", "reports/audit.html"]
