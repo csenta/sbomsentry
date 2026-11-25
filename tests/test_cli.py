@@ -3,11 +3,12 @@ import os
 import tempfile
 import unittest
 from sbomsentry.cli import handle_graph, handle_remediate, handle_scan
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class TestCLI(unittest.TestCase):
     def setUp(self):
-        self.cyclonedx_file = "/home/emprogue/Projects/sbomsentry/examples/cyclonedx_sbom.json"
+        self.cyclonedx_file = os.path.join(_ROOT, "examples", "cyclonedx_sbom.json")
 
     def test_cli_scan(self):
         with tempfile.NamedTemporaryFile(delete=False, suffix=".json") as f_json:

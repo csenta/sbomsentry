@@ -1,8 +1,10 @@
 # SBOMsentry 🛡️
 
+> **Status:** prototype. A personal security-research project, not a production product. Expect rough edges; issues and pull requests are welcome.
+
 > **Autonomous Software Supply Chain Security & SBOM Intelligence Platform**
 
-SBOMsentry is an enterprise-grade Software Supply Chain security platform. It ingests multi-format Software Bill of Materials (CycloneDX, SPDX, requirements.txt, and npm lockfiles), reconstructs dependency topology into a directed acyclic graph (DAG), and simultaneously performs automated vulnerability reachability tracing, typosquatting & impersonation detection, license compliance auditing, and minimal-breaking-change remediation synthesis.
+SBOMsentry is a prototype Software Supply Chain security platform. It ingests multi-format Software Bill of Materials (CycloneDX, SPDX, requirements.txt, and npm lockfiles), reconstructs dependency topology into a directed acyclic graph (DAG), and simultaneously performs automated vulnerability reachability tracing, typosquatting & impersonation detection, license compliance auditing, and minimal-breaking-change remediation synthesis.
 
 ---
 
@@ -103,3 +105,7 @@ Run with Docker Compose:
 ```bash
 docker-compose up --build
 ```
+
+## License
+
+MIT. See [LICENSE](LICENSE).

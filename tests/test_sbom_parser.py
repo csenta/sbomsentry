@@ -1,13 +1,14 @@
 import os
 import unittest
 from sbomsentry.core.sbom_parser import SBOMParser
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class TestSBOMParser(unittest.TestCase):
     def setUp(self):
-        self.cyclonedx_path = "/home/emprogue/Projects/sbomsentry/examples/cyclonedx_sbom.json"
-        self.req_path = "/home/emprogue/Projects/sbomsentry/examples/requirements.txt"
-        self.lock_path = "/home/emprogue/Projects/sbomsentry/examples/package-lock.json"
+        self.cyclonedx_path = os.path.join(_ROOT, "examples", "cyclonedx_sbom.json")
+        self.req_path = os.path.join(_ROOT, "examples", "requirements.txt")
+        self.lock_path = os.path.join(_ROOT, "examples", "package-lock.json")
 
     def test_parse_cyclonedx(self):
         self.assertTrue(os.path.isfile(self.cyclonedx_path))
